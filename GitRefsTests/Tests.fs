@@ -22,10 +22,7 @@ let expectedPackedRefs = [|
       commitId = "a55239cdab4c8711e67dd180924bced1d17fea1b" }
 |]
 
-let expectedAllRefs = Array.concat [|
-    expectedPrimalRefs
-    expectedPackedRefs
-|]
+let expectedAllRefs = Array.append expectedPrimalRefs expectedPackedRefs
 
 [<Fact>]
 let ``getPrimalRefs should return only primal refs`` () =

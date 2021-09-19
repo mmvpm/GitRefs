@@ -4,10 +4,10 @@ open System
 open GitRefs
 
 [<EntryPoint>]
-let main _ =
-    printf "Enter path to project directory: "
-    let projectDirectory = Console.ReadLine() + "/.git"
-    let refs = Refs.getAllRefs projectDirectory
+let main argv =
+    let projectDir = if Array.isEmpty argv then "." else argv.[0]
+    let gitDir = $"{projectDir}/.git"
+    let refs = Refs.getAllRefs gitDir
     for ref in refs do
         printfn $"{ref}"
     0

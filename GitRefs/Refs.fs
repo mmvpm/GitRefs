@@ -21,10 +21,9 @@ module Refs =
         let renameSlash = fun (s: string) -> s.Replace ("\\", "/")
         let files = Directory.GetFiles searchDir |> Array.map renameSlash
         let dirs = Directory.GetDirectories searchDir |> Array.map renameSlash
-        Array.concat [|
-            Array.collect (readRef gitDir) files
-            Array.collect (getPrimalRefs gitDir) dirs
-        |]
+        Array.append
+            (Array.collect (readRef gitDir) files)
+            (Array.collect (getPrimalRefs gitDir) dirs)
 
     let getPackedRefs (fileName: string) : Ref [] =
         let createRef (line: string) : Ref [] =
@@ -43,7 +42,6 @@ module Refs =
             [||]
 
     let getAllRefs (gitDir: string) : Ref [] =
-        Array.concat [|
-            getPrimalRefs gitDir $"{gitDir}/refs/"
-            getPackedRefs $"{gitDir}/packed-refs"
-        |]
+        Array.append
+            (getPrimalRefs gitDir $"{gitDir}/refs/")
+            (getPackedRefs $"{gitDir}/packed-refs")
