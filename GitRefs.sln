@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "GitRefs", "GitRefs\GitRefs.fsproj", "{FD83456C-4CE4-434E-B0BE-F8064752C442}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "GitRefsTests", "GitRefsTests\GitRefsTests.fsproj", "{7A985410-4609-4757-973C-036903720BCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD83456C-4CE4-434E-B0BE-F8064752C442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD83456C-4CE4-434E-B0BE-F8064752C442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD83456C-4CE4-434E-B0BE-F8064752C442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD83456C-4CE4-434E-B0BE-F8064752C442}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A985410-4609-4757-973C-036903720BCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A985410-4609-4757-973C-036903720BCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A985410-4609-4757-973C-036903720BCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A985410-4609-4757-973C-036903720BCA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
