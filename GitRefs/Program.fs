@@ -1,6 +1,5 @@
 module GitRefs.Program 
 
-open System
 open GitRefs
 
 [<EntryPoint>]
